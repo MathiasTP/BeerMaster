@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:BeerBong.ViewModel;assembly=BeerMaster"
+             x:Class="BeerBong.Views.LoginPage"
+             
+             Title="Login" BackgroundColor="#252525">
+            <ContentPage.ToolbarItems>
+
+            </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <viewModel:LoginViewModel/>
+    </ContentPage.BindingContext>
+            
+    <ContentPage.Content>
+        
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Login med din BeerMaster bruger" FontSize="40" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="Har du ikke en bruger, tryk på opret bruger" TextColor="DarkRed" />
+     
+                    
+                <Entry Text="{Binding username}" TextColor="White" PlaceholderColor="White" Placeholder="Brugernavn" Margin="0,100,0,0" x:Name="Brugernavn"  />
+                <Entry Text="{Binding password}" Placeholder="Password" PlaceholderColor="White" TextColor="White" x:Name="Password" IsPassword="true" />
+                <ActivityIndicator IsRunning="{Binding tænker}" x:Name="Tænker" />
+
+                <Button Grid.Row="2" Text="LOGIN" Command="{Binding OnLoginCommand}"  FontSize="20" BackgroundColor="Green" TextColor="White" Margin="0,20,0,0" BorderColor="#EA2C2C" BorderWidth="0" Clicked="Button_OnClicked" />
+            </StackLayout>
+            <Button Grid.Row="2" Text="Opret bruger"  BackgroundColor="Orange" TextColor="White"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             
+             
+             x:Class="BeerBong.Views.BlueTooth">
+    <ContentPage.ToolbarItems>
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="BONGMASTER" Grid.Row="0" Grid.Column="0" FontSize="40" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.ColumnSpan="2"/>
+            <Button Text="Status" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnStatus_Clicked" />
+            <Button Text="ScanBT" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="LokaltspilButton" Clicked="btScan_Clicked" />
+            <Button Text="GetService" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnGetServices_Clicked" />
+            <Button Text="GetChars" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="1" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnGetChar" />
+            <Button Text="readchar" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnReadChar" />
+            <Button Text="Connect device" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btConnect_Clicked" />
+            <Entry  Placeholder="test" x:Name="tester"  />
+            <Entry  Placeholder="test" x:Name="terstermac" Grid.Row="2" Grid.Column="1"   />
+            <ListView x:Name="DeviceList" ItemSelected="dv_Items" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Id}" FontSize="12" HorizontalTextAlignment="Center" />
+                                <Label Text="{Binding Name}" FontSize="20" HorizontalTextAlignment="Start" />
+                                <!--<Label Text="{Binding Rssi}" FontSize="20" HorizontalTextAlignment="Center" />-->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

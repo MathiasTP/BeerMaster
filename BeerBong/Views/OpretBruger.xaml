@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:BeerBong.ViewModel;assembly=BeerMaster"
+             Title="Opret Bruger"
+             x:Class="BeerBong.Views.OpretBruger">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <viewModel:OpretBrugerViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Indtast ønsket brugernavn og password" />
+                <Entry 
+                       x:Name="Brugernavn"
+                       Placeholder="Brugernavn"
+                       Text="{Binding username}"/>
+                <Entry 
+                       x:Name="Password"
+                       Placeholder="Password"
+                       Text="{Binding _password1}"
+                        />
+                <Entry x:Name="Password2"
+                       Placeholder="Bekræft password"
+                       Text="{Binding _password2}"
+                       IsPassword="True" />
+                <Label Text="{}"
+                       x:Name="ErrorLabel"
+                       
+                       TextColor="Red" />
+            </StackLayout>
+            <Button Grid.Row="2" Text="Opret" Command="{Binding OnClickOpretBruger}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

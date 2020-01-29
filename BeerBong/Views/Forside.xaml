@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImageSource="olbong.png"
+             
+             x:Class="BeerBong.Views.Forside">
+    <ContentPage.ToolbarItems>
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+
+        <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+            <Label Text="BONGMASTER" Grid.Row="0" Grid.Column="0" FontSize="40" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.ColumnSpan="2"/>
+                <Button Text="start lokalt spil" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" x:Name="LokaltspilButton" />
+                <Button Text="vis leaderboard" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="GoToLeaderboard" x:Name="LeaderboardButton" />
+                <Button Text="start online spil" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,0" Clicked="GoToMultiplayer" x:Name="MultiplayerButton" />
+                <Button Text="Login" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="GoToLogin" x:Name="LoginButton" />
+                <Button Text="Opret Bruger" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#BAB0B0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,100,0,0" Clicked="OpretBruger" x:Name="OpretBrugerButton" />
+                <Button Text="Forbind til ølbong" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Scale="1" ScaleX="1" HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Grid.RowSpan="2" TextColor="#000000" BackgroundColor="#5757F3" Clicked="ForbindBT"/>
+            
+            </Grid>
+       
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BeerBong.Views.Multiplayer_2"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="BeerBong Battle
+                   Modstander fundet:"
+                   FontSize="30"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" TextColor="#F3F3F3" />
+            <Entry Placeholder="modstander her" x:Name="modstanderentry" VerticalOptions="Start" HorizontalOptions="Start" FontSize="35" PlaceholderColor="#F02B2B" TextColor="#F41111"/>
+            <Label Text="Du har et minut til at fylde din ølbong:" TextColor="#FFFFFF" x:Name="fyldop" />
+            <Entry Placeholder="60" PlaceholderColor="#FFFFFF" TextColor="#FFFFFF" x:Name="TTimer" FontSize="50" HorizontalOptions="Center"/>
+            <Label Text="Tryk på klar når din ølbong er fyldt med 33cl øl. Du vil så have 2 minutter til at drikke bongen hurtigere end din modstander" TextColor="#FFFFFF" FontSize="18"/>
+            <Button Text="Klar" BackgroundColor="#28D211" x:Name="KlarButton" Clicked="KlarButton_OnClicked" />
+            <Entry  PlaceholderColor="#FFFFFF" TextColor="#FFFFFF" x:Name="DrikTimer" FontSize="40" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+
+            <Entry Text="Din tid:" x:Name="userTid" TextColor="#FFFFFF"  />
+            <Entry Text="Modstanders tid:" x:Name="modstanderTid" TextColor="#FFFFFF"/>
+            <Entry Text="Vinderen er:" x:Name="VinderEntry" TextColor="#FFFFFF" FontSize="30" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

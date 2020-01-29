@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:BeerBong.ViewModel;assembly=BeerMaster"
+             x:Class="BeerBong.Views.Leaderboard"
+             Title="Global Leaderboard">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <viewModel:LeaderboardViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView x:Name="LeaderboardData"
+              Margin="10"
+              
+              RowHeight="70">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Text="{Binding userName}"
+                                   Grid.Column="1"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="25"
+                                   x:Name="NavnLabel"
+                                   VerticalOptions="Center"
+                                   />
+                            <Label Text="{Binding time}"
+                                       Grid.Column="2"
+                                       VerticalTextAlignment="Center"
+                                       VerticalOptions="Center"
+                                       FontSize="25"
+                                       x:Name="TidLabel"/>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

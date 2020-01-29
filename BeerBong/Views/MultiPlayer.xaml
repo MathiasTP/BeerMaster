@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeerBong.Views.Multiplayer"
+             Title="Online Multiplayer" BackgroundColor="#252525">
+        
+
+    <ContentPage.Content>
+
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Online spil 
+                       Dyst imod andre, og drik din ølbong hurtigst!" FontSize="40" FontAttributes="Bold" TextColor="White"/>
+
+                <Button Grid.Row="2" Text="Find modstander" Clicked="OnFindModstander" FontSize="20" BackgroundColor="Green" TextColor="White" Margin="0,20,0,0" BorderColor="#EA2C2C" BorderWidth="0" />
+
+                <Label Text="Regler:" TextColor="White"/>
+                <Label Text="1: Tryk på find modstander" TextColor="White"/>
+                <Label Text="2: App'en finder en værdig modstander" TextColor="White"/>
+                <Label Text="3: Når modstander er fundet føres du videre til en ny side" TextColor="White"/>
+                <Label Text="4: Tryk på klar knappen når du er klar" TextColor="White"/>
+                <Label Text="5: Fyld din ølbong med 33cl mørk øl" TextColor="White"/>
+                <Label Text="6: Nedtælling begynder" TextColor="White"/>
+                <Label Text="7: Drik øl inden tiden løber ud" TextColor="White"/>
+                <Label Text="8: Kan øllen ikke færdiggøres tildeles en ugyldig tid" TextColor="White"/>
+                <Label Text="9: Snydes der med mængde af øl, begynder spillet ikke" TextColor="White"/>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
